@@ -1,27 +1,24 @@
-# Saladnyoo BI Platform
+# F&B Operational BI Platform
 
-Operational Business Intelligence platform built for a multi-store F&B business operating Saladnyoo / Joocy outlets.
+A sanitized case study of an operational Business Intelligence platform built for a multi-store F&B business.
 
-This repository documents a sanitized case study of the PostgreSQL data warehouse, Python ETL pipelines, Power BI-facing marts, planning logic, and operational dashboards used to support daily decision-making across ordering, production, procurement, inventory visibility, and audit monitoring.
+This repository documents the architecture, data warehouse structure, ETL logic, Power BI-facing marts, planning rules, and operational dashboard design used to support daily decision-making across ordering, production, procurement, inventory visibility, and audit monitoring.
 
-The repository is designed to serve two purposes:
-
-1. **Portfolio case study** — showing end-to-end BI platform design, data modeling, business logic, documentation, and handover discipline.
-2. **Public-safe documentation reference** — explaining the system architecture without exposing credentials, raw data, internal infrastructure, or production backup details.
+The implementation is based on a real project, but company-specific information, credentials, raw data, internal infrastructure details, and proprietary exports have been removed or anonymized.
 
 ## Project Highlights
 
-- Built a PostgreSQL-based BI warehouse connected to ERP/API data and manual planning inputs.
-- Designed schema layers for `raw`, `clean`, `planning`, and `mart` data flows.
+- Designed a PostgreSQL-based BI warehouse connected to ERP/API data and manual planning inputs.
+- Built layered data models using `raw`, `clean`, `planning`, and `mart` schemas.
 - Created Power BI-facing marts for ordering, production, procurement, inventory monitoring, and audit support.
-- Documented mart logic, grain, sources, known limitations, data quality risks, and operational notes.
-- Added handover documentation covering refresh schedules, backup principles, troubleshooting, credentials, access structure, and database inventory.
+- Translated operational planning problems into structured SQL models and dashboard-ready business logic.
+- Documented mart logic, grain, source dependencies, known limitations, data quality risks, troubleshooting rules, and handover procedures.
 
 ## Role
 
 Sole BI / data platform developer responsible for the warehouse design, mart logic, ETL structure, dashboard-facing data models, validation checks, and technical documentation.
 
-The work covered both technical implementation and business process translation: turning operational planning problems into structured data models, dashboard-ready marts, and maintainable handover documentation.
+The work covered both technical implementation and business process translation: turning messy operational planning problems into structured data models, dashboard-ready marts, and maintainable handover documentation.
 
 ## System Purpose
 
@@ -87,6 +84,30 @@ It provides:
 - Procurement visibility by item, supplier context, warehouse path, and coverage level
 - Data quality monitoring for wrong, stale, missing, or suspicious dashboard numbers
 - A documented handover structure so the system can be maintained after delivery
+
+## Repository Structure
+
+```text
+.
+├── README.md
+├── docs/
+│   ├── 01_system_overview.md
+│   ├── 02_database_architecture.md
+│   ├── 03_dashboard_overview.md
+│   ├── 04_mart_documentation_template.md
+│   ├── 05_ordering_marts.md
+│   ├── 06_production_marts.md
+│   ├── 07_procurement_marts.md
+│   ├── 08_data_quality.md
+│   ├── 09_operations_runbook.md
+│   ├── 10_backup_and_recovery.md
+│   ├── 11_troubleshooting_wrong_numbers.md
+│   ├── 12_access_and_credentials.md
+│   ├── 13_live_database_inventory.md
+│   ├── 14_final_handover_checklist.md
+│   └── 15_realistic_access_notes.md
+└── .gitignore
+```
 
 ## Documentation Index
 

@@ -1,0 +1,57 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Environment / secrets
+.env
+*.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*service_account*.json
+*credentials*.json
+*secret*.json
+
+# Logs / runtime
+logs/
+*.log
+*.save
+
+# Backups / dumps / exports
+backups/
+backup/
+*.dump
+*.backup
+*.sql.gz
+*.tar.gz
+*.zip
+*.sha256
+*pg_restore_list*.txt
+*restore_list*.txt
+
+# Data exports
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.jsonl
+
+# Power BI local files may contain credentials
+*.pbix
+*.pbit
+
+# Local tests / scratch
+scratch/
+tmp/
+temp/
+test_*.py
